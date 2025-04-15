@@ -13,4 +13,4 @@ blauncher -4.4 --background
 ```
 
 Ensure to set `BLENDER_LAUNCHER_REPO` enviroment variable to Blender Launcher repo:
-- https://github.com/Victor-IX/Blender-Launcher-V2
+- https://github.com/Andrej730/Blender-Launcher-V2/tree/launch-blender-args
