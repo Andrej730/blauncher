@@ -23,7 +23,7 @@ def main():
         str(main_script),
         "launch",
         "--version",
-        version,
+        version + ".*",
         "--cli",
     ]
     if blender_args:
