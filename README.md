@@ -23,7 +23,7 @@ blender --background
 ### Setup
 
 Ensure to set `BLENDER_LAUNCHER_REPO` enviroment variable to Blender Launcher repo:
-- https://github.com/Andrej730/Blender-Launcher-V2/tree/launch-blender-args
+- https://github.com/Victor-IX/Blender-Launcher-V2.git
 
 Currently default Blender version to start when version argument is not provided
 is hardcoded as `DEFAULT_BLENDER_VERSION`.
