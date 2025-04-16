@@ -27,6 +27,7 @@ def main():
         "--cli",
     ]
     if blender_args:
+        args.append("--")
         args.extend(blender_args)
     process = subprocess.run(args, cwd=repo_location)
     exit(process.returncode)
