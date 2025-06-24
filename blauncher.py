@@ -45,7 +45,7 @@ def main():
     if blender_args:
         args.append("--")
         args.extend(blender_args)
-    process = subprocess.run(args, cwd=repo_location)
+    process = subprocess.run(args)
     exit(process.returncode)
 
 
