@@ -4,7 +4,7 @@ import os
 import re
 from pathlib import Path
 
-DEFAULT_BLENDER_VERSION = "4.5"
+DEFAULT_BLENDER_VERSION = "5.0"
 
 
 def parse_version(argv: list[str]) -> tuple[str, list[str]]:
