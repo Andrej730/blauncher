@@ -22,8 +22,10 @@ blender --background
 
 ### Setup
 
-Ensure to set `BLENDER_LAUNCHER_REPO` enviroment variable to Blender Launcher repo:
+Basic setup - ensure "Blender Launcher" executable is in your PATH.
+
+If you want to test dev build, then ensure to set `BLENDER_LAUNCHER_REPO` enviroment variable to Blender Launcher repo:
 - https://github.com/Victor-IX/Blender-Launcher-V2.git
 
 Currently default Blender version to start when version argument is not provided
-is hardcoded as `DEFAULT_BLENDER_VERSION`.
+is hardcoded as `DEFAULT_BLENDER_VERSION` in `blauncher.py`.
