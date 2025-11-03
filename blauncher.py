@@ -22,6 +22,13 @@ def parse_version(argv: list[str]) -> tuple[str, list[str]]:
 
 
 def main():
+    # Using "Blender Launcher" executable from PATH would be more convenient
+    # but there's an issue when you do
+    # `"Blender Launcher.exe" launch --version X.Y.Z --cli`
+    # It launches Blender in a separate process and you won't be able to see the logs
+    # in the terminal where you executed the command.
+    # It's some kind of PyInstaller limitation:
+    # https://github.com/Victor-IX/Blender-Launcher-V2/issues/242
     repo_location = os.environ.get("BLENDER_LAUNCHER_REPO")
     if repo_location is None:
         raise Exception("'BLENDER_LAUNCHER_REPO' environment variable is not set.")
