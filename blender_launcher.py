@@ -19,4 +19,5 @@ repo_location = Path(repo_location)
 main_script = repo_location / "source" / "main.py"
 
 # Use UV to automatically pick up local venv.
+subprocess.check_call([UV, "run", str(repo_location / "build_style.py")], cwd=repo_location)
 subprocess.check_call([UV, "run", str(main_script)], cwd=repo_location)
