@@ -1,7 +1,7 @@
-import sys
-import subprocess
 import os
 import re
+import subprocess
+import sys
 from pathlib import Path
 
 DEFAULT_BLENDER_VERSION = "5.0"
