@@ -41,8 +41,11 @@ def main():
     if version.count(".") == 1:
         version += ".^"
 
+    # Using `uv` instead of `python` to avoid installing all Blender Launcher dependencies globally.
+    # `uv run` will automatically detect venv in the current folder and use it.
     args = [
-        "python",
+        "uv",
+        "run",
         str(main_script),
         "launch",
         "--version",
@@ -52,7 +55,7 @@ def main():
     if blender_args:
         args.append("--")
         args.extend(blender_args)
-    process = subprocess.run(args)
+    process = subprocess.run(args, cwd=repo_location)
     exit(process.returncode)
 
 
