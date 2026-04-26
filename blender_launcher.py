@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """A convenience script to launch Blender Launcher itself.
 
 Since we're stuck without executable and with `BLENDER_LAUNCHER_REPO` environment variable,
