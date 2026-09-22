@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-DEFAULT_BLENDER_VERSION = "5.1"
+DEFAULT_BLENDER_VERSION = "5.2"
 
 
 def parse_version(argv: list[str]) -> tuple[str, list[str]]:
