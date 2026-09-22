@@ -1,0 +1,11 @@
+[project]
+name = "blauncher"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+[project.scripts]
+blender = "blauncher:main"
+blender-launcher = "blender_launcher:main"
+
+[tool.setuptools]
+py-modules = ["blauncher", "blender_launcher"]
