@@ -45,10 +45,14 @@ def main():
         version += ".^"
 
     # Using `uv` instead of `python` to avoid installing all Blender Launcher dependencies globally.
-    # `uv run` will automatically detect venv in the current folder and use it.
+    # `--project` resolves Blender Launcher's venv without changing the working directory,
+    # so relative paths passed through to Blender (e.g. in `blender_args`) stay relative
+    # to the caller's cwd instead of `repo_location`.
     args = [
         "uv",
         "run",
+        "--project",
+        str(repo_location),
         str(main_script),
         "launch",
         "--version",
@@ -58,7 +62,7 @@ def main():
     if blender_args:
         args.append("--")
         args.extend(blender_args)
-    process = subprocess.run(args, cwd=repo_location)
+    process = subprocess.run(args)
     exit(process.returncode)
 
 
